@@ -1,5 +1,5 @@
 import { ExplicitContentFilter } from './explicitContentFilter';
-import { ExternalUrls } from './externalUrls';
+import { ExternalUrl } from './externalUrl';
 import { Followers } from './followers';
 import { Image } from './image';
 export class UserProfile {
@@ -8,7 +8,7 @@ export class UserProfile {
     this.displayName = '';
     this.emailAddress = '';
     this.explicitContentFilter = new ExplicitContentFilter();
-    this.externalUrls = new ExternalUrls();
+    this.externalUrls = new ExternalUrl();
     this.followers = new Followers();
     this.href = '';
     this.id = '';
@@ -22,7 +22,7 @@ export class UserProfile {
   displayName: string;
   emailAddress: string;
   explicitContentFilter: ExplicitContentFilter;
-  externalUrls: ExternalUrls;
+  externalUrls: ExternalUrl;
   followers: Followers;
   href: string;
   id: string;

@@ -1,4 +1,4 @@
-export class ExternalUrls {
+export class ExternalUrl {
   constructor() {
     this.spotify = '';
   }
