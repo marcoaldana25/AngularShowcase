@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { MusicApiService } from '../../../../services/music-api.service';
+import { SearchResult } from '../../data-models/searchResult';
 
 @Component({
   selector: 'artist-search',
@@ -14,6 +15,8 @@ export class ArtistSearchComponent implements OnInit {
     limit: new FormControl(undefined, [Validators.required])
   })
 
+  artistSearchResult: SearchResult = new SearchResult();
+
   constructor(private formBuilder: FormBuilder, private musicApiService: MusicApiService) { }
 
   ngOnInit(): void {
@@ -25,7 +28,7 @@ export class ArtistSearchComponent implements OnInit {
     this.musicApiService
       .getArtistSearch(this.artistSearch?.getRawValue(), this.marketCode?.getRawValue(), this.limit?.getRawValue())
       .subscribe((searchResult) => {
-        console.log(searchResult);
+        this.artistSearchResult = searchResult;
       });
   }
 

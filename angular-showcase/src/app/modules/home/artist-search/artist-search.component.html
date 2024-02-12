@@ -25,3 +25,7 @@
     <button type="submit">Search for an Artist</button>
   </div>
 </form>
+
+<div *ngIf="artistSearchResult.artists">
+  <artist-card [artists]="artistSearchResult.artists"></artist-card>
+</div>
