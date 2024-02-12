@@ -1,0 +1,30 @@
+<div>
+  <h3>User Details</h3>
+  <img src="{{ userProfile.images[1].url }}" />
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Country</th>
+        <th>Display Name</th>
+        <th>Email Address</th>
+        <th>Explicit Content Filter Enabled?</th>
+        <th>Explicit Content Filter Locked?</th>
+        <th>Link to Spotify Account</th>
+        <th>Followers Href</th>
+        <th>Followers Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{ userProfile.country }}</td>
+        <td>{{ userProfile.displayName }}</td>
+        <td>{{ userProfile.emailAddress }}</td>
+        <td>{{ userProfile.explicitContentFilter.filterEnabled }}</td>
+        <td>{{ userProfile.explicitContentFilter.filterLocked }}</td>
+        <td><a href="{{ userProfile.externalUrls.spotify }}">Go to my Spotify</a></td>
+        <td><a href="{{ userProfile.followers.href }}">Go to my followers</a></td>
+        <td>{{ userProfile.followers.total }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
