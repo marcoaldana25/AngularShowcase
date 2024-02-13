@@ -47,4 +47,4 @@ jobs:
         run: npm --prefix ./angular-showcase run ci:build
       
       - name: List Files in Distribution Directory
-        run: ls -R ./dist
+        run: ls -R ./angular-showcase/dist
