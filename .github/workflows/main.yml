@@ -38,13 +38,13 @@ jobs:
         run: npm --prefix ./angular-showcase install
           
       - name: Run Unit Tests
-        run: npm run ci:test
+        run: npm --prefix ./angular-showcase run ci:test
 
       - name: Clean Distribution Directory
-        run: npm run ci:clean
+        run: npm --prefix ./angular-showcase run ci:clean
         
       - name: Build Application
-        run: npm run ci:build
+        run: npm --prefix ./angular-showcase run ci:build
       
       - name: List Files in Distribution Directory
         run: ls -R ./dist
