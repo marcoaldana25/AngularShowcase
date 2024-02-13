@@ -7,7 +7,7 @@ import { UserProfile } from '../../data-models/userProfile';
 import { of } from 'rxjs';
 
 
-fdescribe('UserProfileComponent', () => {
+describe('UserProfileComponent', () => {
   let component: UserProfileComponent;
   let fixture: ComponentFixture<UserProfileComponent>;
   let httpMock: HttpTestingController;
@@ -29,7 +29,7 @@ fdescribe('UserProfileComponent', () => {
       declarations: [
         UserProfileComponent
       ],
-      // Actuaion API Service that is injected into UserProfileComponent.
+      // API Service setup with mock stub
       providers: [
         {
           provide: MusicApiService,
