@@ -1,13 +1,13 @@
 <div *ngIf="artists.items.length > 0">
   <h1>Artists Search Results</h1>
-  <table border="1">
+  <table class="table table-striped table-bordered">
     <thead>
       <tr>
-        <th>Image</th>
-        <th>Artist</th>
-        <th>Follower Count</th>
-        <th>Popularity</th>
-        <th>Spotify Url</th>
+        <th scope="col">Spotify Image</th>
+        <th scope="col">Artist</th>
+        <th scope="col">Follower Count</th>
+        <th scope="col">Popularity (0-100)</th>
+        <th scope="col">Spotify Url</th>
       </tr>
     </thead>
     <tbody>

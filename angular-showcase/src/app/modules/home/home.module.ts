@@ -7,6 +7,7 @@ import { HomeComponent } from './home.component';
 import { ArtistSearchComponent } from './artist-search/artist-search.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ArtistCardComponent } from './artist-card/artist-card.component';
+import { AboutMeComponent } from './about-me/about-me.component';
 
 const homeRoutes: Route[] = [{
   path: '',
@@ -15,6 +16,7 @@ const homeRoutes: Route[] = [{
 
 @NgModule({
   declarations: [
+    AboutMeComponent,
     ArtistCardComponent,
     ArtistSearchComponent,
     HomeComponent,
