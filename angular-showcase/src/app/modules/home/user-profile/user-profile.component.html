@@ -1,6 +1,7 @@
 <div id="userDetails">
   <h3>User Details</h3>
-  <img src="{{ userProfile.images[1].url }}" />
+  <img *ngIf="userProfile.images.length > 0"
+       src="{{ userProfile.images[1].url }}" />
   <table border="1">
     <thead>
       <tr>

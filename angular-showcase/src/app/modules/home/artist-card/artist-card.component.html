@@ -13,7 +13,7 @@
     <tbody>
       <tr *ngFor="let artist of artists.items">
         <td><img *ngIf="artist.images.length > 0"
-                 src="{{ artist.images[0].url ?? '' }}"
+                 src="{{ artist.images[0].url }}"
                  alt="band image"
                  width="320"
                  height="320"/></td>
