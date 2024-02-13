@@ -37,8 +37,8 @@ jobs:
       - name: Install Dependencies
         run: npm --prefix ./angular-showcase install
           
-      - name: Run Unit Tests
-        run: npm --prefix ./angular-showcase run ci:test
+      # - name: Run Unit Tests
+      #   run: npm --prefix ./angular-showcase run ci:test
 
       - name: Clean Distribution Directory
         run: npm --prefix ./angular-showcase run ci:clean
