@@ -5,6 +5,7 @@ import { RouterModule } from "@angular/router";
 
 import { appRoutes } from './app.routes';
 import { CoreModule } from "../core/core.module";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -13,7 +14,9 @@ import { CoreModule } from "../core/core.module";
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     RouterModule.forRoot(appRoutes),
-    CoreModule
+    CoreModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

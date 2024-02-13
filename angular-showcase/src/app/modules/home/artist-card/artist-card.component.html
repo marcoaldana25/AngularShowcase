@@ -1,0 +1,27 @@
+<div *ngIf="artists.items.length > 0">
+  <h1>Artists Search Results</h1>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Image</th>
+        <th>Artist</th>
+        <th>Follower Count</th>
+        <th>Popularity</th>
+        <th>Spotify Url</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let artist of artists.items">
+        <td><img *ngIf="artist.images.length > 0"
+                 src="{{ artist.images[0].url }}"
+                 alt="band image"
+                 width="320"
+                 height="320"/></td>
+        <td>{{ artist.name }}</td>
+        <td>{{ artist.followers.total }}</td>
+        <td>{{ artist.popularity }}</td>
+        <td><a href="{{ artist.externalUrl.spotify }}">Link to Spotify</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

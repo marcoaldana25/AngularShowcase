@@ -4,6 +4,9 @@ import { Route } from '@angular/router';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home.component';
+import { ArtistSearchComponent } from './artist-search/artist-search.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ArtistCardComponent } from './artist-card/artist-card.component';
 
 const homeRoutes: Route[] = [{
   path: '',
@@ -12,12 +15,16 @@ const homeRoutes: Route[] = [{
 
 @NgModule({
   declarations: [
+    ArtistCardComponent,
+    ArtistSearchComponent,
     HomeComponent,
     UserProfileComponent
   ],
   imports: [
     RouterModule.forChild(homeRoutes),
-    CommonModule
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class HomeModule { }

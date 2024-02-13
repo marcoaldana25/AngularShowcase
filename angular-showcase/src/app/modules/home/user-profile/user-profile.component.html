@@ -1,17 +1,18 @@
 <div id="userDetails">
   <h3>User Details</h3>
-  <img src="{{ userProfile.images[1].url }}" />
-  <table border="1" class="table table-striped">
-    <thead class="thead-dark">
+  <img *ngIf="userProfile.images.length > 0"
+       src="{{ userProfile.images[1].url }}" />
+  <table border="1">
+    <thead>
       <tr>
-        <th scope="col">Country</th>
-        <th scope="col">Display Name</th>
-        <th scope="col">Email Address</th>
-        <th scope="col">Explicit Content Filter Enabled?</th>
-        <th scope="col">Explicit Content Filter Locked?</th>
-        <th scope="col">Link to Spotify Account</th>
-        <th scope="col">Followers Href</th>
-        <th scope="col">Followers Total</th>
+        <th>Country</th>
+        <th>Display Name</th>
+        <th>Email Address</th>
+        <th>Explicit Content Filter Enabled?</th>
+        <th>Explicit Content Filter Locked?</th>
+        <th>Link to Spotify Account</th>
+        <th>Followers Href</th>
+        <th>Followers Total</th>
       </tr>
     </thead>
     <tbody>

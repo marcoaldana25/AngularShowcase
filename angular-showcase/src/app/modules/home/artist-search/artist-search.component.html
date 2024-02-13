@@ -1,0 +1,31 @@
+<h1>
+  Search for an Artist:
+</h1>
+
+<form *ngIf="formGroup" [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+  <div id="artistSearch">
+    <label for="artistSearch">
+      Search
+    </label>
+    <input id="artistSearch" type="text" formControlName="artistSearch"/>
+  </div>
+  <div id="marketCode">
+    <label for="marketCode">
+      Market Code
+    </label>
+    <input id="marketCode" type="text" formControlName="marketCode" />
+  </div>
+  <div id="limit">
+    <label for="limit">
+      Artist Limit:
+    </label>
+    <input id="limit" type="text" formControlName="limit" />
+  </div>
+  <div>
+    <button type="submit">Search for an Artist</button>
+  </div>
+</form>
+
+<div *ngIf="artistSearchResult.artists">
+  <artist-card [artists]="artistSearchResult.artists"></artist-card>
+</div>
