@@ -10,6 +10,7 @@ import { Type } from '@angular/core';
 import { of } from 'rxjs';
 import { UserProfile } from '../data-models/userProfile';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AboutMeComponent } from './about-me/about-me.component';
 
 // This UnitTest will test all downstream dependencies. As components are added, this test will probably
 // need to be updated as well with any new dependencies.
@@ -28,6 +29,7 @@ describe('HomeComponent', () => {
         ReactiveFormsModule
       ],
       declarations: [
+        AboutMeComponent,
         HomeComponent,
         UserProfileComponent,
         ArtistSearchComponent,
