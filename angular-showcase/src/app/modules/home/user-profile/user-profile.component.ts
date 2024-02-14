@@ -10,12 +10,21 @@ import { MusicApiService } from '../../../../services/music-api.service';
 export class UserProfileComponent implements OnInit {
   userProfile: UserProfile = new UserProfile();
 
+  userProfileVisible: boolean = false;
+  userProfileText: string = 'Show me yo';
+
+
   ngOnInit(): void {
     this.musicApiService
       .getAccountDetails()
       .subscribe((accountDetails) => {
         this.userProfile = accountDetails;
       });
+  }
+
+  showHideUserProfile(): void {
+    this.userProfileVisible = this.userProfileVisible ? false : true;
+    this.userProfileText = this.userProfileVisible ? "No one cares" : "Wait, let me see that again";
   }
 
   constructor(private musicApiService: MusicApiService) {  }
